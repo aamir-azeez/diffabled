@@ -23,7 +23,7 @@ void main() {
 
 Future<void> showBrailleDialog(BuildContext context) async {
   final prefs = await SharedPreferences.getInstance();
-  bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? true;
+  bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? false; // if null set to false
 
   return showDialog(
     context: context,
@@ -85,7 +85,7 @@ Future<void> showBrailleDialog(BuildContext context) async {
                           value: doNotShowAgain,
                           onChanged: (bool? value) {
                             setState(() {
-                              doNotShowAgain = value ?? false;
+                              doNotShowAgain = value ?? false; // if null set to false
                             });
                           },
                         ),
@@ -274,7 +274,7 @@ class MyApp extends StatelessWidget {
                               Navigator.pushNamed(context, '/quiz');
                             }
                               final prefs = await SharedPreferences.getInstance();
-  bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? true;
+  bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? false; // if null set to false
 
   if (doNotShowAgain) return;
 else showBrailleDialog(context);
@@ -318,7 +318,7 @@ else showBrailleDialog(context);
                               Navigator.pushNamed(context, '/study');
                             }
                               final prefs = await SharedPreferences.getInstance();
-  bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? true;
+  bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? false; // if null set to false
 
   if (doNotShowAgain) return;
   else showBrailleDialog(context);
