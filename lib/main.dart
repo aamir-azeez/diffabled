@@ -76,11 +76,14 @@ Future<void> showBrailleDialog(BuildContext context) async {
                       fontSize: MediaQuery.of(context).size.height * 0.022,
                     ),
                   ),
-                  Row(
+                  Padding(
+                        padding: EdgeInsets.only(
+                            top: MediaQuery.of(context).size.height * 0.025),
+                        child: Row(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.04, // Adjust checkbox size
-                        width: MediaQuery.of(context).size.height * 0.04,
+                        height: MediaQuery.of(context).size.height * 0.03, // Adjust checkbox size
+                        width: MediaQuery.of(context).size.height * 0.03,
                         child: Checkbox(
                           value: doNotShowAgain,
                           onChanged: (bool? value) {
@@ -100,6 +103,7 @@ Future<void> showBrailleDialog(BuildContext context) async {
                         ),
                       ),
                     ],
+                  ),
                   ),
                 ],
               ),
@@ -855,7 +859,7 @@ class StudyPage extends StatelessWidget {
     // Calculate the crossAxisCount based on the width
     // so wider devices would get more columns per row because their width would be more
     // Ensure it's at least 1 to avoid having 0 columns
-    int crossAxisCount = (MediaQuery.of(context).size.width * 0.0051).toInt().clamp(
+    int crossAxisCount = (MediaQuery.of(context).size.width * 0.0065).toInt().clamp(
         1,
         4); // divide by device pixel ratio if 4K devices with high dpi prove to be a problem in the future
     return Scaffold(
