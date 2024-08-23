@@ -12,6 +12,8 @@ If you notice any issues, please feel free to create a pull request. I appreciat
 [DiffAbled Privacy Policy](https://aamirazeez.com/policy/diffabled)
 
 # ChangeLog
+### 1.2.5 (24-Aug-2024)
+- Patched sharedpreferences boolean getting set to the wrong default value.
 ### 1.2.4 (23-Aug-2024) Github Upload:
 - Compressed image and audio assets.
 - Changed audio format from WAV (PCM codec) to FLAC (FLAC codec).
