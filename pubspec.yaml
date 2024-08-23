@@ -75,9 +75,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-     - assets/audio/Bop.wav
-     - assets/audio/Correct.wav
-     - assets/audio/Incorrect.wav
+     - assets/audio/Bop.flac
+     - assets/audio/Correct.flac
+     - assets/audio/Incorrect.flac
      - assets/images/DiffAbled Icon Compressed.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
