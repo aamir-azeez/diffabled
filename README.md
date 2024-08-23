@@ -1,5 +1,5 @@
 # DiffAbled
-[![DiffAbled Logo](https://github.com/aamir-azeez/diffabled/blob/main/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)](https://aamirazeez.com/story/diffabled)
+[<img src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">](https://aamirazeez.com/story/diffabled)
 
 Allows the blind to learn braille independently!
 
