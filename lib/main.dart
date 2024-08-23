@@ -266,7 +266,7 @@ class MyApp extends StatelessWidget {
                           onPressed: () async {
                             {
                               await AssetsAudioPlayer.newPlayer().open(
-                                Audio("assets/audio/Bop.wav"),
+                                Audio("assets/audio/Bop.flac"),
                                 autoStart: true,
                                 showNotification: false,
                               );
@@ -310,7 +310,7 @@ else showBrailleDialog(context);
                           onPressed: () async {
                             {
                               await AssetsAudioPlayer.newPlayer().open(
-                                Audio("assets/audio/Bop.wav"),
+                                Audio("assets/audio/Bop.flac"),
                                 autoStart: true,
                                 showNotification: false,
                               );
@@ -450,7 +450,7 @@ class _QuizPageState extends State<QuizPage> {
       PopHeading = "Incorrect Answer";
 
       AssetsAudioPlayer.newPlayer().open(
-        Audio("assets/audio/Incorrect.wav"),
+        Audio("assets/audio/Incorrect.flac"),
         autoStart: true,
         showNotification: false,
       );
@@ -458,7 +458,7 @@ class _QuizPageState extends State<QuizPage> {
     } else {
       PopHeading = "Correct Answer";
       AssetsAudioPlayer.newPlayer().open(
-        Audio("assets/audio/Correct.wav"),
+        Audio("assets/audio/Correct.flac"),
         autoStart: true,
         showNotification: false,
       );
