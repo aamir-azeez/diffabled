@@ -9,6 +9,8 @@ Allows the blind to learn braille independently!
 I'm new to Flutter and Dart, so you may find some mistakes, bugs, or unoptimized code in my repository.
 If you notice any issues, please feel free to create a pull request. I appreciate your help and feedback!
 
+[DiffAbled Privacy Policy](https://aamirazeez.com/policy/diffabled)
+
 # ChangeLog
 ### 1.2.4 (23-Aug-2024) Github Upload:
 - Compressed image and audio assets.
@@ -37,3 +39,5 @@ If you notice any issues, please feel free to create a pull request. I appreciat
 ## 1.0.0 (16-Feb-2023) Released for Innotech:
 - Silver medallist in Innotech (solo programming category).
 - Learnt Flutter and the Dart programming language in less than a week to meet deadline.
+
+[Repository License](/LICENSE)
