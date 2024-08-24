@@ -149,7 +149,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 100), () {
-      final size = MediaQuery.of(context).size;
       // delayed so widgets can be built first
       showDialog(
         context: context,
@@ -241,7 +240,7 @@ class MyApp extends StatelessWidget {
               appBar: AppBar(
                         toolbarHeight: MediaQuery.of(context).size.height *
                                 0.08,
-                backgroundColor: Color.fromARGB(255, 3, 100, 22),
+                backgroundColor: const Color.fromARGB(255, 3, 100, 22),
                 title: const Text('DiffAbled'),
                                 actions: [
           IconButton(
@@ -280,8 +279,11 @@ class MyApp extends StatelessWidget {
                               final prefs = await SharedPreferences.getInstance();
   bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? false; // if null set to false
 
-  if (doNotShowAgain) return;
-else showBrailleDialog(context);
+  if (doNotShowAgain) {
+    return;
+  } else {
+    showBrailleDialog(context);
+  }
                           },
                           enableFeedback: false,
                           icon: Icon(
@@ -324,8 +326,11 @@ else showBrailleDialog(context);
                               final prefs = await SharedPreferences.getInstance();
   bool doNotShowAgain = prefs.getBool('do_not_show_again') ?? false; // if null set to false
 
-  if (doNotShowAgain) return;
-  else showBrailleDialog(context);
+  if (doNotShowAgain) {
+    return;
+  } else {
+    showBrailleDialog(context);
+  }
                           },
                           enableFeedback: false,
                           icon: Icon(
@@ -474,6 +479,9 @@ class _QuizPageState extends State<QuizPage> {
       builder: (BuildContext context) {
         return SingleChildScrollView(
           child: AlertDialog( // use content padding (like shinkwrap in Blender) if required, but it messes up horizontal alignment. Normally this popup would be big vertically because of the big text even though there is no need.
+            backgroundColor: score == 0
+            ? const Color.fromARGB(255, 255, 138, 130)
+            : const Color.fromARGB(255, 160, 255, 164),
             title: Text(
               PopHeading, // Replace with your actual text or variable
               style: TextStyle(
@@ -490,21 +498,21 @@ class _QuizPageState extends State<QuizPage> {
                       fontSize: MediaQuery.of(context).size.height * 0.035),
                   children: <TextSpan>[
                     TextSpan(
-                      text: _currentQuestionData['letter'].toString() + "\n",
+                      text: "${_currentQuestionData['letter']}\n",
                       style: TextStyle(
                         fontSize: MediaQuery.of(context).size.height * 0.27,
                         fontFamily: 'AppleBraille',
                       ),
                     ),
                     TextSpan(
-                      text: '"' + _currentQuestionData['number'].toString() + '"',
+                      text: '"${_currentQuestionData['number']}"',
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const TextSpan(text: ' stands for "'),
                     TextSpan(
-                      text: _currentQuestionData['meaning'].toString() + '"',
+                      text: '${_currentQuestionData['meaning']}"',
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -540,10 +548,15 @@ While your option "'''),
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height * 0.06,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                backgroundColor:
+                score == 0
+            ? const Color.fromARGB(255, 90, 9, 3)
+            : const Color.fromARGB(255, 3, 73, 6),
+                  ),
                   child: Text(
                     "OK",
                     style: TextStyle(
@@ -723,8 +736,7 @@ class Quiz extends StatelessWidget {
           padding: EdgeInsets.only(bottom: size.height * 0.01),
           child: Center(
             child: Text(
-              "Which letter do these numbers correspond to?\n" +
-                  questionData['number'].toString(),
+              "Which letter do these numbers correspond to?\n${questionData['number']}",
               style: TextStyle(fontSize: size.height * 0.03),
               textAlign: TextAlign.center,
             ), // Display the current question letter
@@ -737,7 +749,7 @@ class Quiz extends StatelessWidget {
               Padding(
             padding: EdgeInsets.only(
                 top: size.height * 0.01, bottom: size.height * 0.01),
-            child: Container(
+            child: SizedBox(
               height: size.height * 0.05,
               width: size.width *
                   0.6, // Set the width to fill the available horizontal space
@@ -894,6 +906,9 @@ class StudyPage extends StatelessWidget {
             padding: EdgeInsets.all(
                 MediaQuery.of(context).size.width * 0.002 / crossAxisCount),
             child: Card(
+color: ((index ~/ crossAxisCount) + (index % crossAxisCount)) % 2 == 0
+    ? const Color.fromARGB(255, 205, 226, 253)
+    : const Color.fromARGB(255, 210, 255, 212),
                 child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
