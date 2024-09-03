@@ -1,6 +1,12 @@
-# DiffAbled
-[<img src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png">](https://aamirazeez.com/story/diffabled)
-[<img src="https://github.com/user-attachments/assets/d958578a-37ed-469c-b30b-4b237dbd65f9">](https://aamirazeez.com/story/diffabled)
+<p align="center">
+  <a href="https://aamirazeez.com/story/diffabled">
+    <img alt="DiffAbled Icon" src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="150" />
+    <h2 align="center">DiffAbled</h2>
+  </a>
+  <a href="https://aamirazeez.com/story/diffabled">
+  <img alt="DiffAbled Explained" src="https://github.com/user-attachments/assets/d958578a-37ed-469c-b30b-4b237dbd65f9" width="300" />
+    </a>
+</p>
 
 Allows the blind to learn braille independently!
 
