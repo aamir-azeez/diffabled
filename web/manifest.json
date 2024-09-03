@@ -1,6 +1,6 @@
 {
-    "name": "coolapp",
-    "short_name": "coolapp",
+    "name": "diffabled",
+    "short_name": "diffabled",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
