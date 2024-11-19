@@ -12,7 +12,7 @@ Allows the blind to learn braille independently!
 
 [Read the story behind DiffAbled](https://aamirazeez.com/story/diffabled)
 
-# Note
+> [!NOTE]
 I'm new to Flutter and Dart, so you may find some mistakes, bugs, or unoptimized code in my repository.
 If you notice any issues, please feel free to create a pull request. I appreciate your help and feedback!
 
