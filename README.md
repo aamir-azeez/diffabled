@@ -8,7 +8,7 @@
     </a>
 </p>
 
-Allows the blind to learn braille independently!
+Allows blind people to learn braille independently!
 
 [Read the story behind DiffAbled](https://aamirazeez.com/story/diffabled)
 
